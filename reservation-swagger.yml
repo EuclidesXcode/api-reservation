@@ -1,0 +1,34 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/Eucode/api-reservation/1.0.0
+info:
+  description: This is a API reservation
+  version: "1.0.0"
+  title: Simple API
+  contact:
+    email: euclideslione@gmail.com
+paths:
+  /Users:
+    get:
+      tags:
+        - users
+      summary: getById
+      operationId: searchUsers
+      description: Use admins authentication for get informations
+      parameters:
+        - in: id
+          name: id
+          description: use this id for find user you requesting
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+        
